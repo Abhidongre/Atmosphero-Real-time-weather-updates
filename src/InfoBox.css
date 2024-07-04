@@ -1,0 +1,21 @@
+.InfoBox{
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    
+
+}
+
+.infocard{
+    height:fit-content;
+    
+}
+
+.textBody{
+    color: #003459;
+
+}
+.textBody p {
+    font-size: 1.1rem;
+    line-height: 38px;
+}

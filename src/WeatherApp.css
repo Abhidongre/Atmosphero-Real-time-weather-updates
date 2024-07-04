@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.aos-init { 
+    opacity: 0; 
+}
+
+.aos-animate { 
+    opacity: 1; 
+    transition: opacity 1s ease-in-out; 
+}
+
+.bodyComponent {
+    display: flex;
+    color: black;
+    justify-content:center;
+    padding:50px;
+    align-items: center;
+    width: 100%;
+    margin: 20px auto;
+    flex-direction: row;
+    gap: 40px;
+}
+
+#header{
+     display: flex; 
+     align-items:center;
+
+}
+
+.header-name{
+
+    font-family: sans-serif;
+    color:#0B4F6C;
+    
+}
+
+.bgSetup {
+    background: black;
+    background: url('../src/assets/weather.jpg') no-repeat;
+    background-size: cover;
+    padding-bottom: 20px;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #4a90e2;
+    
+}
+
+.marquee {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+    
+}
+
+.marquee p {
+    display: inline-block;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 18px;
+    color: white;
+}
+
+/* Styles for small screens */
+@media (max-width: 600px) {
+    .bodyComponent {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .card {
+        width: 80%;
+        margin-top: 15px;
+    }
+    .InfoBox {
+        width: 80%;
+    }
+    .header-name{
+       color: #0B4F6C;
+    }
+}
+
+
+/* Styles for medium screens */
+@media (min-width: 600px) and (max-width: 960px) {
+    .bodyComponent {
+        flex-direction: row;
+        gap: 20px;
+    }
+    .card {
+        width: 45%;
+    }
+    .InfoBox {
+        width: 45%;
+    }
+}
+
+/* Styles for large screens */
+@media (min-width: 960px) {
+    .bodyComponent {
+        flex-direction: row;
+        gap: 40px;
+    }
+    .card {
+        width: 30%;
+    }
+    .InfoBox {
+        width: 30%;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
