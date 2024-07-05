@@ -5,20 +5,19 @@ import Typography from "@mui/material/Typography";
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import Brightness5Icon from '@mui/icons-material/Brightness5';
 import ThunderstormIcon from '@mui/icons-material/Thunderstorm';
+import coldImage from './assets/cold.jpg';
+import sunnyImage from './assets/sunny.jpg';
+import rainImage from './assets/rain.jpg';
 import "./InfoBox.css";
 
 export default function InfoBox({ info }) {
-    const COLD_URL = "../src/assets/cold.jpg";
-    const HOT_URL = "../src/assets/sunny.jpg";
-    const RAIN_URL = "../src/assets/rain.jpg";
-
     return (
         <div className="InfoBox">
-            <Card className="infocard"style={{width:"100%",borderRadius:"10px"}}>
+            <Card className="infocard" style={{ width: "100%", borderRadius: "10px" }}>
                 <CardMedia
                     sx={{ height: 200 }}
                     image={
-                        info.Humidity >= 80 ? RAIN_URL : info.Temperature >= 25 ? HOT_URL : COLD_URL
+                        info.Humidity >= 80 ? rainImage : info.Temperature >= 25 ? sunnyImage : coldImage
                     }
                     title="Weather Condition"
                 />
@@ -41,7 +40,7 @@ export default function InfoBox({ info }) {
                         <p>Wind Speed: {info.Wind_speed} km/h</p>
                         <hr />
                         <p>
-                            The weather is described as <i style={{color:"red"}}>{info.Weather}</i> and feels like {info.feelsLike}&deg;C.
+                            The weather is described as <i style={{ color: "red" }}>{info.Weather}</i> and feels like {info.feelsLike}&deg;C.
                         </p>
                     </Typography>
                 </CardContent>
